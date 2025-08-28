@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorry Kriti ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: white;
+      text-align: center;
+      animation: heartbeat 1.5s infinite;
+    }
+
+    p {
+      color: white;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 30px;
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff2e54;
+      transform: scale(1.1);
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: white;
+      display: none;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -50px;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: floatUp 5s infinite ease-in;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 10px;
+      top: 0;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>I'm Sorry Kriti ❤️</h1>
+  <p>Please forgive me 🙏🥺</p>
+  <button onclick="forgiveMe()">Tap to Forgive Me ❤️</button>
+  <div id="message">Yay! Kriti forgave you Ryan ❤️🥰</div>
+
+  <div class="hearts">
+    <div class="heart" style="left:10%; animation-duration:4s;"></div>
+    <div class="heart" style="left:30%; animation-duration:6s;"></div>
+    <div class="heart" style="left:50%; animation-duration:5s;"></div>
+    <div class="heart" style="left:70%; animation-duration:7s;"></div>
+    <div class="heart" style="left:90%; animation-duration:4.5s;"></div>
+  </div>
+
+  <script>
+    function forgiveMe() {
+      document.getElementById("message").style.display = "block";
+      // Opens email app for Kriti to send you an email
+      window.location.href = "mailto:ryansmith192002@gmail.com?subject=I%20Forgive%20You%20Ryan❤️&body=Yes%20Ryan%2C%20I%20have%20forgiven%20you%20🥰";
+    }
+  </script>
+</body>
+</html>
